@@ -7,7 +7,7 @@ function App(){
   return (
     <div>
    <Navbar />
-      <ItemListContainer greeting={"Bookstore, los mejores libros, al mejor precio."}/>
+      <ItemListContainer greeting={"BookStore, los mejores libros, al mejor precio."}/>
 
 </div>
   );
