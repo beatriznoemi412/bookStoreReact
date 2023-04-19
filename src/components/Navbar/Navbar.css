@@ -1,0 +1,26 @@
+.navContainer{
+    position: sticky;
+    z-index: 3;
+    top: 0;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    height:15vh;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgb(235, 145, 10) 0%, rgb(141, 99, 32) 5%, rgba(255,248,0,1) 100%);
+}
+.navbarLogo{
+    font-family:  'EB Garamond', serif;
+    font-size: 2rem;
+    justify-self: start;
+    margin-left:70px;
+    margin-top: 4vh;
+    cursor: pointer;
+}
+.tipos{
+    margin: 20px;
+    background: none;
+    border-radius: 1em;
+    margin-top: 5.5vh;
+}
