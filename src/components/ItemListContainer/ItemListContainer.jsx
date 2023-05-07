@@ -1,3 +1,6 @@
+import { getProducts} from "../../products/products"
+import { useState, useEffect} from "react"
+import ItemList from "../ItemList/ItemList"
 
 const ItemListContainer = ({greeting}) => {
   const banner = {//declarando los estilos como un objeto
@@ -14,10 +17,22 @@ const ItemListContainer = ({greeting}) => {
     fontSize: "2rem",
     fontFamily: "'EB Garamond', serif"
   }
+  const [products, setProducts] = useState;
+
+  useEffect(()=>{
+    getProducts()
+    .then(response =>{
+      setProducts(response)
+    })
+    .catch(error =>{
+      console.error(error)
+    })
+  })
   return (
     <div className="banner" style={banner}>
       <div className="bannerContainer" style={bannerContainer}>
         {greeting}
+      <ItemList products={products}/>
       </div>
     </div>
   )
