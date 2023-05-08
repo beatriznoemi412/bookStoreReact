@@ -1,15 +1,16 @@
-import "./Item.css";
+import "./ItemDetail.css";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import ItemCount from "../ItemCount/ItemCount";
 
+import React from 'react'
 
-function Item({title, author, price, category, img, stock, description}) {
-  try {
-    return (
-      
-        <Card className="card bg-warning mt-5" style={{ width: '18rem' }}>
-          <Card.Img variant="top" src= {img} className="img"/>
-          <Card.Body>
+const ItemDetail = ({ title, author, price, category, img, stock, description}) => {
+
+  return (
+    <Card className="card bg-warning" id="cardTwelve" style={{ width: '38rem', height: '58rem'}}>
+          <Card.Img variant="top" src= {img} className="img" id="img"/>
+          <Card.Body className="item-actions">
             <Card.Title className="text-center">{title}</Card.Title>
             <Card.Text className="text-center">
               <div>
@@ -27,16 +28,16 @@ function Item({title, author, price, category, img, stock, description}) {
               <div>
                 <p>Descripción: {description}</p>
               </div>
-            </Card.Text>
-            <Button variant="primary">Comprar</Button>
+              </Card.Text>
+           
+              <Button variant="primary">Comprar</Button>
+          <ItemCount initial={1} stock={15} onAdd={(amount)=> console.log("Cantidad", amount)}/>
+         
+          
           </Card.Body>
         </Card>
       
     );
-  } catch (error) {
-    console.error(error);
-    return null;
-  }
-}
+  } 
 
-export default Item
+export default ItemDetail

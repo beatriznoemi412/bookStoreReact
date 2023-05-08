@@ -89,7 +89,7 @@ const products = [
     category : "Libro Autoayuda",
     img : "https://habilidadsocial.com/wp-content/uploads/2018/04/cuestion-de-confianza.jpg",
     stock : 15,
-    description : "Un libro imprescindible para cualquier persona que desee liberarse de sus pensamientos y emociones negativas. Se trata de una obra extraordinariamente práctica sobre terapia de compromiso y aceptación."
+    description : "Un libro imprescindible para cualquier persona que desee liberarse de sus pensamientos y emociones negativas y lograr paz. Se trata de una obra extraordinariamente práctica sobre terapia de compromiso y aceptación."
 },{
     id : "11",
     title : "El poder del ahora",
@@ -114,5 +114,12 @@ export const getProducts = () =>{
         setTimeout(()=>{
             resolve(products)
         }, 1000)
+    })
+}
+export const getProductById = (productId)=>{
+    return new Promise((resolve)=>{
+        setTimeout(()=>{
+           resolve (products.find(prod => prod.id === productId)) 
+        }, 500)
     })
 }
