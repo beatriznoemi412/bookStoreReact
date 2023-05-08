@@ -1,5 +1,6 @@
-import { getProducts} from "../../products/products"
+
 import { useState, useEffect} from "react"
+import { getProducts } from "../../asyncMock"
 import ItemList from "../ItemList/ItemList"
 
 const ItemListContainer = ({greeting}) => {
@@ -17,7 +18,7 @@ const ItemListContainer = ({greeting}) => {
     fontSize: "2rem",
     fontFamily: "'EB Garamond', serif"
   }
-  const [products, setProducts] = useState;
+  const [products, setProducts] = useState([]);
 
   useEffect(()=>{
     getProducts()
@@ -29,12 +30,15 @@ const ItemListContainer = ({greeting}) => {
     })
   })
   return (
+    
     <div className="banner" style={banner}>
       <div className="bannerContainer" style={bannerContainer}>
         {greeting}
       <ItemList products={products}/>
       </div>
     </div>
+    
+    
   )
 }
 

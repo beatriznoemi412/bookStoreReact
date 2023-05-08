@@ -1,8 +1,9 @@
 import "./CartWidget.css";
+
 const CartWidget = () => {
   return (
     <div className="carrito">
-      <img src="../assets/cart.svg"alt="cart"/>
+     <i className="bi bi-cart4"></i>
 
       0
     </div>

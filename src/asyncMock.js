@@ -1,6 +1,6 @@
 const products = [
     {
-    id : 1,
+    id : "1",
     title : "La Sirenita. Libro de arte bajo el mar.",
     author : "Disney",
     price : 6700,
@@ -9,7 +9,7 @@ const products = [
     stock : 15,
     description : "Ariel y sus amigos te acompañarán en la aventura con actividades creativas de todo tipo."
 },{
-    id : 2,
+    id : "2",
     title : "Mi primera copa del mundo",
     author : "Martina Fileni",
     price : 2800,
@@ -18,7 +18,7 @@ const products = [
     stock : 15,
     description : "Los campeones del mundo festejamos como queremos. Revivamos Juntos los momentos más épicos de este Mundial"
 },{
-    id : 3,
+    id : "3",
     title : "Fechas patrias. 11 de septiembre",
     author : "Felipe Pigna",
     price : 3500,
@@ -27,7 +27,7 @@ const products = [
     sotck : 15,
     description : "Cada 11 de septiembre, al celebrar el Día del Maestro, recordamos a Domingo Faustino Sarmiento. De esa forma, lo homenajeamos como educador, pero también como escritor, periodista y político muy polémico."
 },{
-    id : 4,
+    id : "4",
     title : "Mi parte favorita de la vida",
     author : "Fabián Sevilla",
     price : 3400,
@@ -36,7 +36,7 @@ const products = [
     stock : 15,
     description : "Cristabel y Miranda  enfrentan la presión socialy la de su entorno para poder construir sus identidades. Y para hacerlo, apuestan a sus emociones.Un taller de arte será su punto de encuentro y, desde allí, se ayudarán"
 },{
-    id : 5,
+    id : "5",
     title : "Las mil y una noches",
     author : "Anónimo",
     price : 5200,
@@ -45,7 +45,7 @@ const products = [
     stock : 15,
     description : "Las mil y unas noches no sólo es un mosaico que contiene cuentos de los distintos pueblos que en un momento u otro los acogieron, sino que también es un mosaico de las diversas morales de los mismos"
 },{
-   id : 6,
+   id : "6",
    title : "Don Quijote de la Mancha" ,
    author : "Miguel de Cervantes Saavedra",
    price :8900,
@@ -54,7 +54,7 @@ const products = [
    stock : 15,
    description : "Otro clásico, que rompió con todos los esquemas de las novelas de caballería de la época, sale de nuestras tierras. Nos referimos a Don Quijote de la Mancha, conocido alrededor del mundo y, sí, uno de los libros clásicos de la literatura que consideramos imprescindibles. En él se relatan las aventuras de Don Quijote junto a Pedro Sancho."
 },{
-    id : 7,
+    id : "7",
     title : "Los tres mosqueteros" ,
     author : "Alejandro Dumas",
     price :8500,
@@ -64,7 +64,7 @@ const products = [
     description :"Una de las mejores novelas de aventuras de todos los tiempos y un clásico indiscutible del género de capa y espada."
    
 },{
-    id : 8,
+    id : "8",
     title : "Moby Dick",
     author : "Herman Melville",
     price :6300,
@@ -73,7 +73,7 @@ const products = [
     stock : 15,
     description : "El lector, sin duda algo aturdido por su larga navegación, se encuentra abrumado en el trágico final: más adelante, cuando vuelva a abrir Moby Dick, por el comienzo o no, aunque ya sepa todo el desarrollo, no dejará de sentirse de nuevo arrastrado por la voz de Melville a navegar de nuevo, páginas y páginas."
 },{
-    id : 9,
+    id : "9",
     title : "Sé amable contigo mismo",
     author : "Kristin Neff",
     price :5200,
@@ -82,7 +82,7 @@ const products = [
     stock : 15,
     description : "La búsqueda incansable de una autoestima sana se ha convertido en una religión tiránica. Nuestra cultura ultra competitiva nos indica que tenemos que estar por encima de la media para sentirnos bien con nosotros mismos."
 },{
-    id : 10,
+    id : "10",
     title : "Cuestión de confianza",
     author : "Dr. Russ Harris",
     price :6200,
@@ -91,7 +91,7 @@ const products = [
     stock : 15,
     descripcion : "Un libro imprescindible para cualquier persona que desee liberarse de sus pensamientos y emociones negativas. Se trata de una obra extraordinariamente práctica sobre terapia de compromiso y aceptación, un enfoque que ya ha demostrado su eficacia en multitud de estudios científicos."
 },{
-    id : 11,
+    id : "11",
     title : "El poder del ahora",
     author : "Eckhart Tolle",
     price :4800,
@@ -99,7 +99,7 @@ const products = [
     img : "https://habilidadsocial.com/wp-content/uploads/2018/04/el-poder-del-ahora.jpg",
     description : " Se trata de uno de los mayores bestsellers a nivel mundial, en el que Tolle propone varias estrategias para centrarte en el momento presente y aprender a convivir con tu voz interior."
 },{
-    id : 12,
+    id : "12",
     title : "El hombre en busca de sentido",
     author : "Viktor Frankl",
     price :5400,
