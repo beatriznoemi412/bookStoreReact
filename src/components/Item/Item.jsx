@@ -1,13 +1,14 @@
+import "./Item.css";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import Col from 'react-bootstrap/Col';
+
 
 function Item({title, author, price, category, img, stock, description}) {
   try {
     return (
-      <Col lg={4}>
-        <Card style={{ width: '18rem' }}>
-          <Card.Img variant="top" src= {img}/>
+      
+        <Card className="card bg-warning mt-5" style={{ width: '18rem' }}>
+          <Card.Img variant="top" src= {img} className="img"/>
           <Card.Body>
             <Card.Title>{title}</Card.Title>
             <Card.Text>
@@ -30,7 +31,7 @@ function Item({title, author, price, category, img, stock, description}) {
             <Button variant="primary">Comprar</Button>
           </Card.Body>
         </Card>
-      </Col>
+      
     );
   } catch (error) {
     console.error(error);
