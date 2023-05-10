@@ -1,7 +1,5 @@
 #cardTwelve{
-    position: relative;
-    margin-top: 2680px;
-    margin-left: 300px;
+  margin-left: 400px;
 }
 .item-actions {
     display: flex;
@@ -13,6 +11,6 @@
     margin: 0.5rem 0;
   }
   #img{
-    height: 400px!important;
+    height: 300px!important;
   }
   

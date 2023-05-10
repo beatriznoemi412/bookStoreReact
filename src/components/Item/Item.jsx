@@ -1,13 +1,13 @@
 import "./Item.css";
-import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import { Link } from "react-router-dom";
 
 
-function Item({title, author, price, category, img, stock, description}) {
+function Item({id, title, author, price, category, img, stock}) {
   try {
     return (
       
-        <Card className="card bg-warning mt-5" style={{ width: '18rem' }}>
+        <Card className="card bg-warning mt-5" style={{ width: '18rem', height: '40rem'}}>
           <Card.Img variant="top" src= {img} className="img"/>
           <Card.Body>
             <Card.Title className="text-center">{title}</Card.Title>
@@ -24,11 +24,9 @@ function Item({title, author, price, category, img, stock, description}) {
               <div>
                 <p>Stock: {stock}</p>
               </div>
-              <div>
-                <p>Descripción: {description}</p>
-              </div>
+            
+            <Link to={`/item/${id}`} className="option text-center">Ver Detalle</Link>
             </Card.Text>
-            <Button variant="primary">Comprar</Button>
           </Card.Body>
         </Card>
       

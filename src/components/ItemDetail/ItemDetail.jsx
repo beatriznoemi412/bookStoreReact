@@ -8,7 +8,7 @@ import React from 'react'
 const ItemDetail = ({ title, author, price, category, img, stock, description}) => {
 
   return (
-    <Card className="card bg-warning" id="cardTwelve" style={{ width: '38rem', height: '58rem'}}>
+    <Card className="card bg-warning mt-5" id="cardTwelve" style={{ width: '25rem', height: '56rem'}}>
           <Card.Img variant="top" src= {img} className="img" id="img"/>
           <Card.Body className="item-actions">
             <Card.Title className="text-center">{title}</Card.Title>

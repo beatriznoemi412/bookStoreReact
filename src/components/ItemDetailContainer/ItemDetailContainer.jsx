@@ -3,24 +3,27 @@ import Col from "react-bootstrap/Col";
 import { useEffect, useState } from "react";
 import { getProductById } from "../../asyncMock";
 import ItemDetail from "../ItemDetail/ItemDetail";
+import { useParams } from "react-router-dom";
 
 
 function ItemDetailContainer() {
     const [product, setProduct] = useState(null)
-  
+    
+    const { itemId } = useParams()
+
     useEffect(()=>{
-        getProductById('12')
+        getProductById(itemId)
            .then(response =>{
             setProduct(response)
            })
            .catch(error => {
             console.error(error)
            })
-    }, [])
+    }, [itemId])
     return (
       <Row className="row-cols-lg-1">
       <Col>
-    <div className="itemDetailContainer col mb-1 ">
+    <div className=" col mb-1 ">
         <ItemDetail {...product}/>
     </div>
     </Col>

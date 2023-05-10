@@ -17,10 +17,16 @@
     margin-left:70px;
     margin-top: 4vh;
     cursor: pointer;
+    color: black;
 }
-.tipos{
+.option{
+    text-decoration: none;
+}
+#navLink{
     margin: 20px;
     background: none;
     border-radius: 1em;
     margin-top: 5.5vh;
+    color: black!important;
+    font-size: 1.2rem;
 }

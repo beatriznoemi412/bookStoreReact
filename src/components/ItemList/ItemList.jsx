@@ -6,7 +6,7 @@ import Col from "react-bootstrap/Col";
 const ItemList=({products})=> {
   return (
     <Container fluid>
-      <Row className="row-cols-lg-4">
+      <Row className="row-cols-lg-4 mt-5">
        
         {products.map(prod =>
         <Col key={prod.id} className="col mb-4">
