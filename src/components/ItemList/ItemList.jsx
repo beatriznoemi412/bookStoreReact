@@ -1,4 +1,4 @@
-import Item from "../Item/Item";
+import Item from "../item/item";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";

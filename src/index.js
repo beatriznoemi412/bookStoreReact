@@ -1,13 +1,53 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import reportWebVitals from "./reportWebVitals";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+import Navbar from "./components/navbar/navbar";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+import ItemListContainer from "./components/itemListContainer/itemListContainer";
+import ItemDetailContainer from "./components/itemDetailContainer/itemDetailContainer";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: (
+      <>
+        <Navbar />
+        <ItemListContainer greeting="BookStore, los mejores libros, al mejor precio." />
+      </>
+    ),
+  },
+
+  {
+    path: "/category/:categoryId",
+    element: (
+      <>
+        <Navbar />
+        <ItemListContainer />,
+      </>
+    ),
+  },
+  {
+    path: "/item/:itemId",
+    element: (
+      <>
+        <Navbar />
+        <ItemDetailContainer />,
+      </>
+    ),
+  },
+  {
+    path: "*",
+    element: <h1>404 NOT FOUND</h1>,
+  },
+]);
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 

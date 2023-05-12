@@ -1,9 +1,8 @@
-import "./ItemDetail.css";
+import "./itemDetail.css";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import ItemCount from "../ItemCount/ItemCount";
+import ItemCount from "../itemCount/itemCount";
 
-import React from 'react'
 
 const ItemDetail = ({ title, author, price, category, img, stock, description}) => {
 

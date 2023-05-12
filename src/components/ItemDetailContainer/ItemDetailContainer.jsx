@@ -2,7 +2,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { useEffect, useState } from "react";
 import { getProductById } from "../../asyncMock";
-import ItemDetail from "../ItemDetail/ItemDetail";
+import ItemDetail from "../itemDetail/itemDetail";
 import { useParams } from "react-router-dom";
 
 
