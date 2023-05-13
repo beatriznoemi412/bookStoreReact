@@ -25,7 +25,7 @@ const router = createBrowserRouter([
     element: (
       <>
         <Navbar />
-        <ItemListContainer />,
+        <ItemListContainer greeting="BookStore, los mejores libros, al mejor precio." />,
       </>
     ),
   },
