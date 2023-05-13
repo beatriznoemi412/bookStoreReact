@@ -43,8 +43,6 @@ const ItemListContainer = ({greeting}) => {
       <div className="bannerContainer" style={bannerContainer}>
         {greeting}
         </div>
-        <br />
-        <br />
         <div>
       <ItemList products={products}/>
       </div>
