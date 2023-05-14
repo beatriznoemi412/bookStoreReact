@@ -22,21 +22,11 @@ const ItemDetail = ({
       <Card.Body className="item-actions">
         <Card.Title className="text-center">{title}</Card.Title>
         <Card.Text className="text-center">
-          <div>
-            <span>Autor: {author}</span>
-          </div>
-          <div>
-            <span>Precio: {price}</span>
-          </div>
-          <div>
-            <span>Categoría: {category}</span>
-          </div>
-          <div>
-            <span>Stock: {stock}</span>
-          </div>
-          <div>
-            <span>Descripción: {description}</span>
-          </div>
+          <div>Autor: {author}</div>
+          <div>Precio: {price}</div>
+          <div>Categoría: {category}</div>
+          <div>Stock: {stock}</div>
+          <div>Descripción: {description}</div>
         </Card.Text>
 
         <Button variant="primary">Comprar</Button>

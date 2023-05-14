@@ -6,27 +6,27 @@ import ItemList from "../itemList/itemList";
 import { useParams } from "react-router-dom";
 
 const ItemListContainer = ({greeting}) => {
-  const banner = {//declarando los estilos como un objeto
+  const banner = {
     backgroundSize: "cover",
     backgroundPosition: "center",
     height: "84vh",
-    backgroundImage:`url(${"https://cdn.pixabay.com/photo/2018/04/16/09/30/literature-3324023_1280.jpg"})`
+    backgroundImage:`url(${"https://cdn.pixabay.com/photo/2018/04/16/09/30/literature-3324023_1280.jpg"})`,
   }
   const bannerContainer ={
     textAlign: "center",
     padding: "15% 0",
     color: "white",
-    textShadow: "1 px 1px 3px rgba(0,0,0,0.2)",
+    textShadow: "1px 1px 3px rgba(0, 0, 0, 0.2)",
     fontSize: "2rem",
-    fontFamily: "'EB Garamond', serif"
-  }
+    fontFamily: "'EB Garamond', serif",
+  };
 
   const [products, setProducts] = useState([]);
   
   const { categoryId } = useParams()
 
   useEffect(()=>{
-    const asyncFunc = categoryId ? getProductsByCategory : getProducts
+    const asyncFunc = categoryId ? getProductsByCategory : getProducts;
 
     asyncFunc(categoryId)
       .then(response => {
@@ -35,7 +35,7 @@ const ItemListContainer = ({greeting}) => {
     
     .catch(error =>{
       console.error(error)
-    })
+    });
   }, [categoryId])
   return (
     <>
@@ -43,10 +43,8 @@ const ItemListContainer = ({greeting}) => {
       <div className="bannerContainer" style={bannerContainer}>
         {greeting}
         </div>
-        <div>
+        </div>
       <ItemList products={products}/>
-      </div>
-    </div>
     </>
     )
 }
