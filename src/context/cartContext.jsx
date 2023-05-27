@@ -25,16 +25,15 @@ export const CartProvider = ({ children }) => {
   const clearCart = () => {
     setCart([]);
   };
-
   const isInCart = (itemId) => {
-    return cart.some(({ item }) => item.id === itemId);
+    return cart.some(( item ) => item.id === itemId);
+  
   };
-
   return (
-    <CartContext.Provider value={{ cart, addItem, removeItem, clearCart }}>
+    <CartContext.Provider value={{ cart, addItem, removeItem, clearCart}}>
       {children}
     </CartContext.Provider>
   );
-};
+  }
 
 export default CartContext;

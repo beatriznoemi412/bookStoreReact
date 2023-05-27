@@ -35,17 +35,18 @@ const ItemDetail = ({
       style={{ width: "25rem", height: "56rem" }}
     >
       <Card.Img variant="top" src={img} className="img" id="img" />
+     
       <Card.Body className="item-actions">
-        <Card.Title className="text-center">{title}</Card.Title>
-        <Card.Text className="text-center">
+        <div className="text-center">{title}</div>
+        <div className="text-center">
           <div>Autor: {author}</div>
           <div>Precio: {price}</div>
           <div>Categoría: {category}</div>
           <div>Stock: {stock}</div>
           <div>Descripción: {description}</div>
-        </Card.Text>
-        {
-        amountEntered > 0 ? (
+        </div>
+        
+        {amountEntered > 0 ? (
           <Link id="navLink" to="/cart" >Terminar Compra</Link>
         ) : (
         <ItemCount
