@@ -1,9 +1,12 @@
 import "./itemDetail.css";
-import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import ItemCount from "../itemCount/itemCount";
+import { useContext, useState } from "react";
+import { Link } from "react-router-dom";
+import { CartContext } from "../../context/cartContext";
 
 const ItemDetail = ({
+  id,
   title,
   author,
   price,
@@ -12,6 +15,19 @@ const ItemDetail = ({
   stock,
   description,
 }) => {
+  const [amountEntered, setAmountEntered] = useState(0);
+   
+  const{ addItem } = useContext(CartContext);
+  
+  const handleEntered = (amount) =>{
+    setAmountEntered(amount)
+
+    const item = {
+      id, title, price
+    }
+   addItem (item, amount);
+   }
+
   return (
     <Card
       className="card bg-warning mt-5"
@@ -28,13 +44,17 @@ const ItemDetail = ({
           <div>Stock: {stock}</div>
           <div>Descripción: {description}</div>
         </Card.Text>
-
-        <Button variant="primary">Comprar</Button>
+        {
+        amountEntered > 0 ? (
+          <Link id="navLink" to="/cart" >Terminar Compra</Link>
+        ) : (
         <ItemCount
           initial={1}
-          stock={15}
-          onAdd={(amount) => console.log("Cantidad", amount)}
+          stock={stock}
+          onAdd={(handleEntered)}
         />
+        )
+}
       </Card.Body>
     </Card>
   );

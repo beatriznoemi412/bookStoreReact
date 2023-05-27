@@ -1,13 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { createBrowserRouter, RouterProvider } from "react-router-dom"; 
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
+import { CartProvider } from "./context/cartContext";
+
 
 import Navbar from "./components/navbar/navbar";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-
 import ItemListContainer from "./components/itemListContainer/itemListContainer";
 import ItemDetailContainer from "./components/itemDetailContainer/itemDetailContainer";
+import Cart from "./components/cart/cart";
+
 
 const router = createBrowserRouter([
   {
@@ -25,7 +28,8 @@ const router = createBrowserRouter([
     element: (
       <>
         <Navbar />
-        <ItemListContainer greeting="BookStore, los mejores libros, al mejor precio." />,
+        <ItemListContainer greeting="BookStore, los mejores libros, al mejor precio." />
+        ,
       </>
     ),
   },
@@ -39,6 +43,14 @@ const router = createBrowserRouter([
     ),
   },
   {
+    path: "/cart",
+    element: (
+      <>
+        <Cart />,
+      </>
+    ),
+  },
+  {
     path: "*",
     element: <h1>404 NOT FOUND</h1>,
   },
@@ -47,7 +59,9 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <CartProvider value={[]}>
+      <RouterProvider router={router} />
+    </CartProvider>
   </React.StrictMode>
 );
 

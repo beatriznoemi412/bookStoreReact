@@ -1,7 +1,15 @@
 .cart{
+    position: relative;
     margin-right: 20px;
     margin-top: 4vh;
     cursor: pointer;
-    text-decoration: none;
-    margin-right: 70px;
+    width: 60px;
+    height: 60px;
+   
 }
+  
+ 
+  
+  
+  
+  
