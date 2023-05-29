@@ -2,11 +2,12 @@
 
 const CartItem = ({ title, img, price, amount }) => {
   return (
-    <div className="cart-item">
+    <div className="cartItem">
       <h3>{title}</h3>
-      <img src={img} alt={title} />
+      <img className="selectedProd" src={img} alt={title} />
       <p>Precio: $ {price}</p>
       <p>Cantidad: {amount}</p>
+     
     </div>
   );
 };

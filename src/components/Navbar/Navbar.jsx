@@ -15,9 +15,10 @@ const Navbar = () => {
           <NavLink id="navLink" to={"/category/Clasicos"} className={({ isActive})=> isActive ? "ActiveOption" : "Option"}>Clásicos</NavLink>
           <NavLink id="navLink" to={"/category/Autoayuda"} className={({ isActive})=> isActive ? "ActiveOption" : "Option"}>Autoayuda</NavLink>
         </div>
-      
+        <div className="right-section">
         <CartWidget />
         <Loader />
+        </div>
       </nav>
     </div>
   )

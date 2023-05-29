@@ -24,7 +24,7 @@ const products = [
     price : 3500,
     category :"Infantiles",
     img : "https://planetadelibrosar7.cdnstatics.com/usuaris/libros/fotos/337/m_libros/portada_fechas-patrias-11-de-septiembre-planeta-lector_felipe-pigna_202210111930.jpg",
-    sotck : 15,
+    stock : 15,
     description : "Celebramos el Día del Maestro, recordamos a Domingo Faustino Sarmiento. De esa forma, lo homenajeamos como educador, pero también como escritor, periodista y político muy polémico."
 },{
     id : "4",
@@ -97,6 +97,7 @@ const products = [
     price :4800,
     category : "Autoayuda",
     img : "https://habilidadsocial.com/wp-content/uploads/2018/04/el-poder-del-ahora.jpg",
+    stock: 15,
     description : " Se trata de uno de los mayores bestsellers a nivel mundial, en el que Tolle propone varias estrategias para centrarte en el momento presente y aprender a convivir con tu voz interior, concientizándose en vivir el presente."
 },{
     id : "12",
@@ -105,6 +106,7 @@ const products = [
     price :5400,
     category : "Autoayuda",
     img : "https://m.media-amazon.com/images/I/413BSRDOlsL._SX324_BO1,204,203,200_.jpg",
+    stock: 15,
     description : "El hombre en busca de sentido es el estremecedor relato en el que Viktor Frankl nos narra su experiencia en los campos de concentración, siendo hiperrealista su descripción de ese momento de su vida."
 }
 

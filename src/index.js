@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom"; 
+import {createBrowserRouter, RouterProvider } from "react-router-dom"; 
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import { CartProvider } from "./context/cartContext";
@@ -38,7 +38,7 @@ const router = createBrowserRouter([
     element: (
       <>
         <Navbar />
-        <ItemDetailContainer />,
+        <ItemDetailContainer />
       </>
     ),
   },
@@ -46,7 +46,9 @@ const router = createBrowserRouter([
     path: "/cart",
     element: (
       <>
-        <Cart />,
+      <Navbar />
+      <Cart />
+    
       </>
     ),
   },
@@ -58,11 +60,13 @@ const router = createBrowserRouter([
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
+
   <React.StrictMode>
     <CartProvider value={[]}>
-      <RouterProvider router={router} />
+    <RouterProvider router={router} />
     </CartProvider>
-  </React.StrictMode>
+  </React.StrictMode>,
+ 
 );
 
 // If you want to start measuring performance in your app, pass a function
