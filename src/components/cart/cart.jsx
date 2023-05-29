@@ -5,7 +5,7 @@ import CartItem from "../cartItem/cartItem";
 import { Link } from "react-router-dom";
 
 const Cart = () => {
-  const { cart, clearCart, totalAmount, removeItem } = useContext(CartContext);
+  const { cart, clearCart, totalAmount, removeItem, calculateTotal, calculateItemSubtotal  } = useContext(CartContext);
 
   if (totalAmount === 0) {
     return (
@@ -28,21 +28,8 @@ const Cart = () => {
     clearCart();
   };
 
-  const calculateItemSubtotal = (amount, price) => {
-    const itemQuantity = parseInt(amount);
-    const itemPrice = parseFloat(price);
-    return itemQuantity * itemPrice;
-  };
-
-  const calculateTotal = () => {
-    let sum = 0;
-    cart.forEach((prod) => {
-      const itemSubtotal = calculateItemSubtotal(prod.amount, prod.price);
-      sum += itemSubtotal;
-    });
-    return sum;
-  };
-
+ 
+ 
   const total = calculateTotal();
 
   return (
@@ -50,8 +37,7 @@ const Cart = () => {
       {cart.map((prod) => (
         <div key={prod.id} className="item-row">
           <div className="item">
-            <CartItem {...prod} />
-            <img src={prod.img} alt=""/>
+            <CartItem {...prod} handleRemove={ handleRemove} calculateItemSubtotal={calculateItemSubtotal}/>
           </div>
           <div className="remove-button">
             <button onClick={() => handleRemove(prod.id)}>
@@ -59,12 +45,7 @@ const Cart = () => {
                 ❌
               </span>
             </button>
-          </div>
-          <div className="subtotal">
-            <h4>
-              Subtotal: $ {calculateItemSubtotal(prod.amount, prod.price)}
-            </h4>
-          </div>
+        </div>
         </div>
       ))}
       <div className="actions">
@@ -79,7 +60,7 @@ const Cart = () => {
         Checkout
       </Link>
     </div>
-  );
-};
+  )
+      };
 
 export default Cart;
